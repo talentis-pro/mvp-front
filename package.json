@@ -1,0 +1,35 @@
+{
+	"name": "mvp-front",
+	"version": "1.0.0",
+	"private": false,
+	"license": "MIT",
+	"dependencies": {
+		"@chakra-ui/icons": "^2.0.2",
+		"@chakra-ui/react": "^2.2.1",
+		"@chakra-ui/theme-tools": "^2.0.2",
+		"@emotion/react": "^11.9.0",
+		"@emotion/styled": "^11.9.0",
+		"framer-motion": "^6.3.0",
+		"next": "^12.2.2",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@techmmunity/eslint-config": "^5.2.3",
+		"@types/node": "^18.0.0",
+		"@types/react": "^18.0.0",
+		"@types/react-dom": "^18.0.0",
+		"eslint": "^8.19.0",
+		"prettier": "^2.7.1",
+		"typescript": "^4.7.2"
+	},
+	"scripts": {
+		"dev": "next",
+		"build": "next build",
+		"export": "next export",
+		"start": "next start",
+		"lint": "eslint . --quiet",
+		"format": "eslint src --fix --quiet",
+		"type-check": "tsc"
+	}
+}
