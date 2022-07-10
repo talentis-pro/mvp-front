@@ -6,15 +6,7 @@ import { useForm } from "react-hook-form";
 export const SignInPageComponent = () => {
 	const router = useRouter();
 	const { register, handleSubmit } = useForm();
-	const [showPassword, changeShowPassword] = useState(true);
-
-	const passwordView = () => {
-		if (showPassword) {
-			return changeShowPassword(false);
-		}
-
-		return changeShowPassword(true);
-	};
+	const [showPassword, setShowPassword] = useState(true);
 
 	const onSubmit = data => data;
 
@@ -30,7 +22,17 @@ export const SignInPageComponent = () => {
 					name="password"
 					id="password"
 				/>
-				<Box onClick={passwordView}>Amostrar senha</Box>
+				<Box
+					onClick={() => {
+						if (showPassword) {
+							return setShowPassword(false);
+						}
+
+						return setShowPassword(true);
+					}}
+				>
+					Amostrar senha
+				</Box>
 				<Button type="submit">Entrar</Button>
 			</FormControl>
 
