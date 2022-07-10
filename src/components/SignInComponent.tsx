@@ -1,4 +1,4 @@
-import { Box, Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
+import { Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -22,7 +22,7 @@ export const SignInPageComponent = () => {
 					name="password"
 					id="password"
 				/>
-				<Box
+				<Button
 					onClick={() => {
 						if (showPassword) {
 							return setShowPassword(false);
@@ -31,8 +31,8 @@ export const SignInPageComponent = () => {
 						return setShowPassword(true);
 					}}
 				>
-					Amostrar senha
-				</Box>
+					Mostrar senha
+				</Button>
 				<Button type="submit">Entrar</Button>
 			</FormControl>
 
