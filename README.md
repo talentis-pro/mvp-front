@@ -42,4 +42,4 @@ Se ele expirar, vcs precisam gerar um novo accessToken usando o refreshToken
 Vcs vao mandar uma request pra rota lá q gera um novo accessToken, mandando o refreshToken e o userId no body
 Eu aconselho vcs n fazerem isso automaticamente, tipo deixar um job la pra rodar a cada 10 min, pq pode dar mt merda
 Aconselho vcs a terem tipo um middleware pra fazer as requests
-Ae toda vez antes de fazer uma request ele verifica se o token ta expirado, e se tiver, antes de fazer a request ele gera um novo token, e ae faz a request
+Ae toda vez antes de fazer uma request ele verifica se o token ta expirado, e se tiver, antes de fazer a request ele gera um novo token, e ae faz a request.
