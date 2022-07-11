@@ -33,7 +33,12 @@ export const SignUpPage = () => {
 				<Button onClick={() => setShowPassword(!showPassword)}>
 					Mostrar senha
 				</Button>
-				<Button type="submit">Entrar</Button>
+				<Button
+					type="submit"
+					onClick={() => router.push("/auth/verify-account")}
+				>
+					Entrar
+				</Button>
 			</FormControl>
 			<Button onClick={() => router.push("/auth/sign-in")}>
 				Página de acesso
