@@ -3,12 +3,17 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
-export const SignInPageComponent = () => {
+interface Data {
+	email: string;
+	password: string;
+}
+
+export const SignInPage = () => {
 	const router = useRouter();
-	const { register, handleSubmit } = useForm();
+	const { register, handleSubmit } = useForm<Data>();
 	const [showPassword, setShowPassword] = useState(true);
 
-	const onSubmit = data => data;
+	const onSubmit = (data: Data) => data;
 
 	return (
 		<>
@@ -22,15 +27,7 @@ export const SignInPageComponent = () => {
 					name="password"
 					id="password"
 				/>
-				<Button
-					onClick={() => {
-						if (showPassword) {
-							return setShowPassword(false);
-						}
-
-						return setShowPassword(true);
-					}}
-				>
+				<Button onClick={() => setShowPassword(!showPassword)}>
 					Mostrar senha
 				</Button>
 				<Button type="submit">Entrar</Button>
