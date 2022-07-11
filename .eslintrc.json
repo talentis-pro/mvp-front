@@ -6,6 +6,8 @@
 		"@techmmunity/eslint-config/ts-nextjs"
 	],
 	"rules": {
+		"@next/next/no-script-in-document": "off",
+		"@next/next/link-passhref": "off",
 		"import-helpers/order-imports": [
 			"warn",
 			{
