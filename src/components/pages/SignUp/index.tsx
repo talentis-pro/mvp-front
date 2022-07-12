@@ -16,6 +16,7 @@ export const SignUpPage = () => {
 	const onSubmit = (data: Data) => {
 		// eslint-disable-next-line no-console
 		console.log(data);
+		router.push("/auth/verify-account");
 	};
 
 	return (
