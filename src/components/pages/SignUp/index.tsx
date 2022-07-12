@@ -20,7 +20,12 @@ export const SignUpPage = () => {
 
 	return (
 		<>
-			<FormControl onSubmit={handleSubmit(onSubmit)}>
+			<FormControl
+				onSubmit={() => {
+					handleSubmit(onSubmit);
+					router.push("/auth/verify-account");
+				}}
+			>
 				<FormLabel htmlFor="email">Email</FormLabel>
 				<Input name="email" id="email" type="email" {...register("email")} />
 				<FormLabel htmlFor="password">Senha</FormLabel>
@@ -33,12 +38,7 @@ export const SignUpPage = () => {
 				<Button onClick={() => setShowPassword(!showPassword)}>
 					Mostrar senha
 				</Button>
-				<Button
-					type="submit"
-					onClick={() => router.push("/auth/verify-account")}
-				>
-					Entrar
-				</Button>
+				<Button type="submit">Entrar</Button>
 			</FormControl>
 			<Button onClick={() => router.push("/auth/sign-in")}>
 				Página de acesso
