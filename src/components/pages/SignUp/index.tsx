@@ -16,16 +16,12 @@ export const SignUpPage = () => {
 	const onSubmit = (data: Data) => {
 		// eslint-disable-next-line no-console
 		console.log(data);
+		router.push("/auth/verify-account");
 	};
 
 	return (
 		<>
-			<FormControl
-				onSubmit={() => {
-					handleSubmit(onSubmit);
-					router.push("/auth/verify-account");
-				}}
-			>
+			<FormControl onSubmit={handleSubmit(onSubmit)}>
 				<FormLabel htmlFor="email">Email</FormLabel>
 				<Input name="email" id="email" type="email" {...register("email")} />
 				<FormLabel htmlFor="password">Senha</FormLabel>
