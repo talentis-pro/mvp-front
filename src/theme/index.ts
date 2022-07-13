@@ -11,13 +11,10 @@ export const theme = extendTheme({
 	semanticTokens: {
 		colors: {
 			primary: {
-				default: "white",
+				default: "#F0F5FF",
 			},
 			vividPrimary: {
-				default: "#2028EB",
-			},
-			secondary: {
-				default: "#637488",
+				default: "#7135DF",
 			},
 			background: {
 				default: "primary",
@@ -26,7 +23,10 @@ export const theme = extendTheme({
 				default: "black",
 			},
 			firstText: {
-				default: "secondary",
+				default: "#637488",
+			},
+			secondText: {
+				default: "#555555",
 			},
 			outlinePrimary: {
 				default: "vividPrimary",
@@ -35,13 +35,16 @@ export const theme = extendTheme({
 				default: "black",
 			},
 			border: {
-				default: "secondary",
+				default: "#637488",
 			},
 			link: {
 				default: "vividPrimary",
 			},
-			divider: {
-				default: "secondary",
+			buttonBackground: {
+				default: "linear-gradient(91.21deg, #9650F9 0%, #4513C0 100%)",
+			},
+			buttonText: {
+				default: "primary",
 			},
 			error: {
 				default: "red.500",

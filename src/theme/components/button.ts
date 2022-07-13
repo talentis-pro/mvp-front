@@ -8,14 +8,14 @@ const disabledButton = {
 export const Button = {
 	variants: {
 		"default": {
-			bg: "vividPrimary",
-			color: "primary",
+			bg: "buttonBackground",
+			color: "buttonText",
 			border: "1px solid",
 			borderColor: "transparent",
 			_hover: {
 				opacity: 0.8,
 				_disabled: {
-					bg: "vividPrimary",
+					bg: "buttonBackground",
 				},
 			},
 			_focus: {
