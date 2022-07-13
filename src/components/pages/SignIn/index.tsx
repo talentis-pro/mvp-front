@@ -65,48 +65,50 @@ export const SignInPage: FCWithLayout = () => {
 					w="full"
 					onSubmit={handleSubmit(onSubmit)}
 				>
-					<FormControl isInvalid={Boolean(errors.email)}>
-						<FormLabel htmlFor="email">
-							<Text>E-mail</Text>
-						</FormLabel>
-						<InputGroup>
-							<Input
-								id="email"
-								type="email"
-								placeholder="exemplo@gmail.com"
-								{...register("email", {
-									required: true,
-								})}
-							/>
-							<InputRightElement>
-								<AtSignIcon />
-							</InputRightElement>
-						</InputGroup>
-					</FormControl>
-					<FormControl isInvalid={Boolean(errors.password)}>
-						<FormLabel htmlFor="password">
-							<Text>Senha</Text>
-						</FormLabel>
-						<InputGroup>
-							<Input
-								id="password"
-								type={showPassword ? "text" : "password"}
-								placeholder="Senha forte de 8+ caracteres"
-								{...register("password", {
-									required: true,
-								})}
-							/>
-							<InputRightElement>
-								<Button
-									variant="transparent"
-									onClick={() => setShowPassword(!showPassword)}
-									aria-label={showPassword ? "Esconder" : "Mostrar"}
-								>
-									{showPassword ? <ViewOffIcon /> : <ViewIcon />}
-								</Button>
-							</InputRightElement>
-						</InputGroup>
-					</FormControl>
+					<form>
+						<FormControl isInvalid={Boolean(errors.email)}>
+							<FormLabel htmlFor="email">
+								<Text>E-mail</Text>
+							</FormLabel>
+							<InputGroup>
+								<Input
+									id="email"
+									type="email"
+									placeholder="exemplo@gmail.com"
+									{...register("email", {
+										required: true,
+									})}
+								/>
+								<InputRightElement>
+									<AtSignIcon />
+								</InputRightElement>
+							</InputGroup>
+						</FormControl>
+						<FormControl isInvalid={Boolean(errors.password)}>
+							<FormLabel htmlFor="password">
+								<Text>Senha</Text>
+							</FormLabel>
+							<InputGroup>
+								<Input
+									id="password"
+									type={showPassword ? "text" : "password"}
+									placeholder="Senha forte de 8+ caracteres"
+									{...register("password", {
+										required: true,
+									})}
+								/>
+								<InputRightElement>
+									<Button
+										variant="transparent"
+										onClick={() => setShowPassword(!showPassword)}
+										aria-label={showPassword ? "Esconder" : "Mostrar"}
+									>
+										{showPassword ? <ViewOffIcon /> : <ViewIcon />}
+									</Button>
+								</InputRightElement>
+							</InputGroup>
+						</FormControl>
+					</form>
 					<Button
 						w="full"
 						rightIcon={<ArrowForwardIcon />}

@@ -15,11 +15,13 @@ export const VerifyAccountPage = () => {
 
 	return (
 		<>
-			<FormControl onSubmit={handleSubmit(onSubmit)}>
-				<FormLabel htmlFor="email">Código</FormLabel>
-				<Input name="code" id="code" type="text" {...register("code")} />
-				<Button type="submit">Verificar</Button>
-			</FormControl>
+			<form>
+				<FormControl onSubmit={handleSubmit(onSubmit)}>
+					<FormLabel htmlFor="email">Código</FormLabel>
+					<Input name="code" id="code" type="text" {...register("code")} />
+					<Button type="submit">Verificar</Button>
+				</FormControl>
+			</form>
 		</>
 	);
 };
