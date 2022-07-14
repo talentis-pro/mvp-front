@@ -113,13 +113,13 @@ export const SignInPage: FCWithLayout = () => {
 						type="submit"
 						disabled={!isValid}
 					>
-						Faça login
+						<Text mx="auto">Faça login</Text>
 					</Button>
 				</Flex>
 				<Flex align="center" justify="flex-end" w="full" py="2">
 					<Text>
 						Não tem uma conta?{" "}
-						<NextLink href="/auth/sign-in" passHref>
+						<NextLink href="/auth/sign-up" passHref>
 							<Link color="link">Cadastre-se</Link>
 						</NextLink>
 					</Text>
