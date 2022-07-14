@@ -121,7 +121,7 @@ export const SignUpPage: FCWithLayout = () => {
 					type="submit"
 					disabled={!isValid}
 				>
-					Criar conta
+					<Text mx="auto">Criar conta</Text>
 				</Button>
 			</Flex>
 			<Flex align="center" justify="flex-end" w="full" py="2">
